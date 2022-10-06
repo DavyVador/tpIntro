@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Post create!{% endblock %}
+
+{% block body %}
+    {% form_theme postType 'bootstrap_5_layout.html.twig' %}
+    {{ form_start(postType) }}
+    {{ form_errors(postType) }}
+    <div class="col-3">
+        <h2>{{ form_label(postType.title) }}</h2>
+        {{ form_widget(postType.title) }}
+    </div>
+    <div class="col-3">
+        <h2>{{ form_label(postType.content) }}</h2>
+        {{ form_widget(postType.content) }}
+    </div>
+    <div class="col-3">
+        <h2>{{ form_label(postType.dateCreated) }}</h2>
+        {{ form_widget(postType.dateCreated) }}
+    </div>
+    <div class="row justify-content-center, col-3">
+        {{ form_widget(postType.save) }}
+    </div>
+    {{ form_end(postType) }}
+{% endblock %}

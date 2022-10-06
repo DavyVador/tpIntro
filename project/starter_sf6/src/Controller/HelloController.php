@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class HelloController extends AbstractController
 {
-    #[Route("/helloRandom")]
+    #[Route("/helloRandom", name: 'app_hello_random')]
     public function randomNameAction(): Response
     {
         return new Response(

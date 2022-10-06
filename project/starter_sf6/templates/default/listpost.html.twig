@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Post List{% endblock %}
+
+{% block body %}
+
+    {% for post in posts %}
+
+    <div style="height: 50px; margin: 10px; width: auto; background-color: darkblue; color: white">
+    {{ post.title }}
+    {{ post.dateCreated|date('Y-m-d') }}
+    {{ post.content }}
+        <a href="" class="text-bg-primary">View</a>
+        <a href="" class="text-bg-success">Edit</a>
+        <a href="" class="text-bg-danger">Delete</a>
+    </div>
+
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ form_start( creationForm ) }}
+    {{ form_errors(creationForm.title) }}
+    {{ form_label(creationForm.title) }}
+    {{ form_widget(creationForm.title) }}
+
+    {{ form_end(creationForm) }}
+{% endblock %}
